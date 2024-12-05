@@ -1,0 +1,17 @@
+[
+    {
+        "instance_id": "matplotlib__matplotlib-26011",
+        "model_name_or_path": "gpt-4o-mini",
+        "model_patch": "diff --git a/matplotlib/lib/matplotlib/axes/_base.py b/matplotlib/lib/matplotlib/axes/_base.py\nindex abcdef1..1234567 100644\n--- a/matplotlib/lib/matplotlib/axes/_base.py\n+++ b/matplotlib/lib/matplotlib/axes/_base.py\n@@ -1289,7 +1289,7 @@ def set_xlim(self, left=None, right=None, emit=True, auto=True):\n         # Call all of the other x-axes that are shared with this one\n         for other in self._shared_x_axes.get_siblings(self):\n             if other is not self:\n-                other.set_xlim(self.viewLim.intervalx, emit=False, auto=auto)\n+                other.set_xlim(self.viewLim.intervalx, emit=True, auto=auto)\n \n         if emit:\n             self.callbacks.process('xlim_changed', self)\n \n+\n"
+    },
+    {
+        "instance_id": "scikit-learn__scikit-learn-25638",
+        "model_name_or_path": "gpt-4o-mini",
+        "model_patch": "diff --git a/sklearn/utils/multiclass.py b/sklearn/utils/multiclass.py\nindex 1234567..89abcdef 100644\n--- a/sklearn/utils/multiclass.py\n+++ b/sklearn/utils/multiclass.py\n@@ -1,6 +1,7 @@\n import numpy as np\n import pandas as pd\n from pandas.api.types import is_integer_dtype, is_float_dtype, is_bool_dtype\n \n+from pandas import Int64Dtype, Float64Dtype, BooleanDtype\n \n def unique_labels(*ys):\n     \"\"\"Extract an ordered array of unique labels.\n@@ -20,6 +21,12 @@ def unique_labels(*ys):\n     # Check that we don't mix label format\n     \n     ys_types = set(type_of_target(x) for x in ys)\n     if ys_types == {\"binary\", \"multiclass\"}:\n         ys_types = {\"multiclass\"}\n \n+    # Handle nullable pandas dtypes\n+    for i, y in enumerate(ys):\n+        if is_integer_dtype(y) or isinstance(y.dtype, Int64Dtype):\n+            ys[i] = y.astype('int64')\n+        elif is_float_dtype(y) or isinstance(y.dtype, Float64Dtype):\n+            ys[i] = y.astype('float64')\n+        elif is_bool_dtype(y) or isinstance(y.dtype, BooleanDtype):\n+            ys[i] = y.astype('bool')\n \n     if len(ys_types) > 1:\n         raise ValueError(\"Mix type of y not allowed, got types %s\" % ys_types)\n \n+    \n"
+    },
+    {
+        "instance_id": "sympy__sympy-14024",
+        "model_name_or_path": "gpt-4o-mini",
+        "model_patch": "diff --git a/simplify/simplify.py b/simplify/simplify.py\nnew file mode 100644\nindex 0000000..e69de29\n--- /dev/null\n+++ b/simplify/simplify.py\n@@ -0,0 +1,30 @@\n+from sympy import Symbol, simplify, S, N\n+\n+def test_simplify_inconsistency():\n+    x = Symbol('x')\n+    a = Symbol('a', integer=True, positive=True)\n+    e = (-a)**x * a**(-x)\n+    f = simplify(e)\n+    \n+    assert str(e) == 'a**(-x)*(-a)**x'\n+    assert str(f) == '(-1)**x'\n+    \n+    t = -S(10)/3\n+    n1 = e.subs(x, t)\n+    n2 = f.subs(x, t)\n+    \n+    assert N(n1) == N(n2)\n+\n+    a = S(2)\n+    e = (-a)**x * a**(-x)\n+    f = simplify(e)\n+    \n+    assert str(e) == '(-2)**x*2**(-x)'\n+    assert str(f) == '(-1)**x'\n+    \n+    t = -S(10)/3\n+    n1 = e.subs(x, t)\n+    n2 = f.subs(x, t)\n+    \n+    assert N(n1) == N(n2)\n+\n+test_simplify_inconsistency()"
+    }
+]

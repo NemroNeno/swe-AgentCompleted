@@ -1,0 +1,10 @@
+diff --git a/sum_list.py b/sum_list.py
+--- a/sum_list.py
++++ b/sum_list.py
+@@ -2,5 +2,4 @@ def sum_list(numbers):
+     return sum(numbers)
+ 
+ if __name__ == "__main__":
+     numbers = [1, 2, 3, 4, 5]
+-   print(sum_list(numbers))
+/ No new line at the end of the file

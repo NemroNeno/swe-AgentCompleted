@@ -1,0 +1,12 @@
+[
+    {
+        "instance_id": "matplotlib__matplotlib-26011",
+        "model_name_or_path": "gpt-4o-mini",
+        "model_patch": "diff --git a/lib/matplotlib/axes/_base.py b/lib/matplotlib/axes/_base.py\nindex abcdef1..1234567 100644\n--- a/lib/matplotlib/axes/_base.py\n+++ b/lib/matplotlib/axes/_base.py\n@@ -1234,7 +1234,7 @@ def set_xlim(self, left, right, emit=True, auto=True):\n         self.viewLim.intervalx = (left, right)\n         self.stale = True\n         if emit:\n-            self.callbacks.process('xlim_changed', self)\n+            self.callbacks.process('xlim_changed', self)  # Emit xlim_changed callback\n             # Call all of the other x-axes that are shared with this one\n             for other in self._shared_x_axes.get_siblings(self):\n                 if other is not self:\n \n \n                                                  \n'"
+    },
+    {
+        "instance_id": "scikit-learn__scikit-learn-25638",
+        "model_name_or_path": "gpt-4o-mini",
+        "model_patch": "```diff\ndiff --git a/sklearn/utils/multiclass.py b/sklearn/utils/multiclass.py\nindex 1234567..89abcdef 100644\n--- a/sklearn/utils/multiclass.py\n+++ b/sklearn/utils/multiclass.py\n@@ -81,6 +81,8 @@ def unique_labels(*ys):\n \n     ys_types = set(type_of_target(x) for x in ys)\n     if ys_types == {\"binary\", \"multiclass\"}:\n+        # Allow nullable dtypes\n+        ys_types = {\"multiclass\"} if not ys_types.intersection({\"binary\", \"multiclass\"}) else ys_types\n         ys_types = {\"multiclass\"}\n \n     if len(ys_types) > 1:\n@@ -116,6 +118,8 @@ def unique_labels(*ys):\n \n     # Get the unique set of labels\n     _unique_labels = _FN_UNIQUE_LABELS.get(label_type, None)\n+    if label_type in {\"binary\", \"multiclass\"} and any(isinstance(y, pd.Series) and y.dtype.name in {\"Int64\", \"Float64\", \"boolean\"} for y in ys):\n+        label_type = \"multiclass\"\n     if not _unique_labels:\n         raise ValueError(\"Unknown label type: %s\" % repr(ys))\n \n```"
+    }
+]

@@ -1,0 +1,259 @@
+{
+    "total": 50,
+    "generated": 45,
+    "resolved_count": 6,
+    "resolved_with_errors_count": 39,
+    "resolved": [
+        "django__django-15498",
+        "django__django-15996",
+        "django__django-16255",
+        "matplotlib__matplotlib-23314",
+        "matplotlib__matplotlib-23562",
+        "scikit-learn__scikit-learn-12471"
+    ],
+    "resolved_with_errors": [
+        "astropy__astropy-14365",
+        "astropy__astropy-14995",
+        "astropy__astropy-7746",
+        "django__django-12125",
+        "django__django-13315",
+        "django__django-13447",
+        "django__django-14752",
+        "django__django-16873",
+        "matplotlib__matplotlib-22835",
+        "matplotlib__matplotlib-24149",
+        "pydata__xarray-5131",
+        "pylint-dev__pylint-5859",
+        "pylint-dev__pylint-7080",
+        "pytest-dev__pytest-5227",
+        "scikit-learn__scikit-learn-10949",
+        "scikit-learn__scikit-learn-11040",
+        "scikit-learn__scikit-learn-13779",
+        "scikit-learn__scikit-learn-25638",
+        "sphinx-doc__sphinx-10325",
+        "sphinx-doc__sphinx-8506",
+        "sympy__sympy-11400",
+        "sympy__sympy-13471",
+        "sympy__sympy-13773",
+        "sympy__sympy-13895",
+        "sympy__sympy-13915",
+        "sympy__sympy-15678",
+        "sympy__sympy-18189",
+        "sympy__sympy-18835",
+        "sympy__sympy-19487",
+        "sympy__sympy-20322",
+        "sympy__sympy-20442",
+        "sympy__sympy-20639",
+        "sympy__sympy-21055",
+        "sympy__sympy-21171",
+        "sympy__sympy-21379",
+        "sympy__sympy-21612",
+        "sympy__sympy-21847",
+        "sympy__sympy-22714",
+        "sympy__sympy-23117"
+    ],
+    "generation_errors": [
+        {
+            "instance_id": "django__django-10914",
+            "error": "[Errno 2] No such file or directory: 'test-repos/django/patch.diff'"
+        },
+        {
+            "instance_id": "pydata__xarray-3364",
+            "error": "[Errno 2] No such file or directory: 'test-repos/xarray/patch.diff'"
+        },
+        {
+            "instance_id": "pytest-dev__pytest-5103",
+            "error": "Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key."
+        },
+        {
+            "instance_id": "sympy__sympy-23262",
+            "error": "Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key."
+        },
+        {
+            "instance_id": "sympy__sympy-24152",
+            "error": "Recursion limit of 100 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key."
+        }
+    ],
+    "generation_time_in_seconds": [
+        {
+            "instance_id": "astropy__astropy-14365",
+            "time": 431.8286693096161
+        },
+        {
+            "instance_id": "astropy__astropy-14995",
+            "time": 129.62211418151855
+        },
+        {
+            "instance_id": "astropy__astropy-7746",
+            "time": 87.43512845039368
+        },
+        {
+            "instance_id": "django__django-12125",
+            "time": 931.7069756984711
+        },
+        {
+            "instance_id": "django__django-13315",
+            "time": 169.8954780101776
+        },
+        {
+            "instance_id": "django__django-13447",
+            "time": 109.0745952129364
+        },
+        {
+            "instance_id": "django__django-14752",
+            "time": 211.87322616577148
+        },
+        {
+            "instance_id": "django__django-15498",
+            "time": 110.48498845100403
+        },
+        {
+            "instance_id": "django__django-15996",
+            "time": 98.79668188095093
+        },
+        {
+            "instance_id": "django__django-16255",
+            "time": 148.8461148738861
+        },
+        {
+            "instance_id": "django__django-16873",
+            "time": 281.77964329719543
+        },
+        {
+            "instance_id": "matplotlib__matplotlib-22835",
+            "time": 70.07627058029175
+        },
+        {
+            "instance_id": "matplotlib__matplotlib-23314",
+            "time": 39.565085887908936
+        },
+        {
+            "instance_id": "matplotlib__matplotlib-23562",
+            "time": 39.72736120223999
+        },
+        {
+            "instance_id": "matplotlib__matplotlib-24149",
+            "time": 34.023290157318115
+        },
+        {
+            "instance_id": "pydata__xarray-5131",
+            "time": 132.9338023662567
+        },
+        {
+            "instance_id": "pylint-dev__pylint-5859",
+            "time": 208.61875772476196
+        },
+        {
+            "instance_id": "pylint-dev__pylint-7080",
+            "time": 94.95308041572571
+        },
+        {
+            "instance_id": "pytest-dev__pytest-5227",
+            "time": 44.20346403121948
+        },
+        {
+            "instance_id": "scikit-learn__scikit-learn-10949",
+            "time": 288.6770498752594
+        },
+        {
+            "instance_id": "scikit-learn__scikit-learn-11040",
+            "time": 63.43190050125122
+        },
+        {
+            "instance_id": "scikit-learn__scikit-learn-12471",
+            "time": 20.933743715286255
+        },
+        {
+            "instance_id": "scikit-learn__scikit-learn-13779",
+            "time": 50.64111042022705
+        },
+        {
+            "instance_id": "scikit-learn__scikit-learn-25638",
+            "time": 40.733452796936035
+        },
+        {
+            "instance_id": "sphinx-doc__sphinx-10325",
+            "time": 296.5862548351288
+        },
+        {
+            "instance_id": "sphinx-doc__sphinx-8506",
+            "time": 71.17923641204834
+        },
+        {
+            "instance_id": "sympy__sympy-11400",
+            "time": 97.0146222114563
+        },
+        {
+            "instance_id": "sympy__sympy-13471",
+            "time": 540.6471354961395
+        },
+        {
+            "instance_id": "sympy__sympy-13773",
+            "time": 88.35900330543518
+        },
+        {
+            "instance_id": "sympy__sympy-13895",
+            "time": 58.3945255279541
+        },
+        {
+            "instance_id": "sympy__sympy-13915",
+            "time": 67.88413572311401
+        },
+        {
+            "instance_id": "sympy__sympy-15678",
+            "time": 60.173808574676514
+        },
+        {
+            "instance_id": "sympy__sympy-18189",
+            "time": 116.37578392028809
+        },
+        {
+            "instance_id": "sympy__sympy-18835",
+            "time": 53.0631947517395
+        },
+        {
+            "instance_id": "sympy__sympy-19487",
+            "time": 68.16555285453796
+        },
+        {
+            "instance_id": "sympy__sympy-20322",
+            "time": 55.04400038719177
+        },
+        {
+            "instance_id": "sympy__sympy-20442",
+            "time": 53.108965158462524
+        },
+        {
+            "instance_id": "sympy__sympy-20639",
+            "time": 79.25397872924805
+        },
+        {
+            "instance_id": "sympy__sympy-21055",
+            "time": 48.618956089019775
+        },
+        {
+            "instance_id": "sympy__sympy-21171",
+            "time": 40.30970621109009
+        },
+        {
+            "instance_id": "sympy__sympy-21379",
+            "time": 104.24541783332825
+        },
+        {
+            "instance_id": "sympy__sympy-21612",
+            "time": 73.14570188522339
+        },
+        {
+            "instance_id": "sympy__sympy-21847",
+            "time": 701.4790542125702
+        },
+        {
+            "instance_id": "sympy__sympy-22714",
+            "time": 678.5971639156342
+        },
+        {
+            "instance_id": "sympy__sympy-23117",
+            "time": 53.43634629249573
+        }
+    ]
+}

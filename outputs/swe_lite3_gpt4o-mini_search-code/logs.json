@@ -1,0 +1,14 @@
+{
+    "total": 3,
+    "generated": 3,
+    "resolved_count": 1,
+    "resolved_with_errors_count": 2,
+    "resolved": [
+        "sympy__sympy-14024"
+    ],
+    "resolved_with_errors": [
+        "matplotlib__matplotlib-26011",
+        "scikit-learn__scikit-learn-25638"
+    ],
+    "generation_errors": []
+}
